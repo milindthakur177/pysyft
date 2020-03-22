@@ -17,6 +17,7 @@ y_ptr = y.send(tom)
 sub_ptr = x_ptr - y_ptr
 print(sub_ptr) #output ([4., 3., 2., 1., 0.])
 
+jim = sy.VirtualWorker(hook, id="jim")
 x = torch.tensor([1,2,3,4,5.], requires_grad=True).send(jim)
 y = torch.tensor([1,1,1,1,1.], requires_grad=True).send(jim)
 
